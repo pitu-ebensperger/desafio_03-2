@@ -11,6 +11,7 @@
    
     <script src="https://kit.fontawesome.com/662a1bdfcd.js" crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -31,17 +32,17 @@
     
             <div class="sticker">
                 <img src="/assets/img/sticker3.png" alt="sticker 1">
-                <input type="number" id="sticker1" name="sticker1" min="0"  placeholder="0" oninput="validity.valid||(value='');">
+                <input type="number" id="sticker1" name="sticker1" min="0"  placeholder="0" value="0" oninput="validity.valid||(value='');">
             </div>
 
             <div class="sticker">
                 <img src="/assets/img/sticker7.png" alt="sticker 2">
-                <input type="number" id="sticker2" name="sticker2" min="0" placeholder="0" oninput="validity.valid||(value='');">
+                <input type="number" id="sticker2" name="sticker2" min="0" placeholder="0" value="0" oninput="validity.valid||(value='');">
             </div>
 
             <div class="sticker">
                 <img src="/assets/img/sticker2.png" alt="sticker 3">
-                <input type="number" id="sticker3" name="sticker3" min="0"  placeholder="0" oninput="validity.valid||(value='');">
+                <input type="number" id="sticker3" name="sticker3" min="0"  placeholder="0" value="0" oninput="validity.valid||(value='');">
             </div>
             </div>
 
@@ -58,9 +59,9 @@
 
     function stickertotal(){
 
-    let stickers1 = Number(document.getElementById("sticker1").value);
-    let stickers2 = Number(document.getElementById("sticker2").value);
-    let stickers3 = Number(document.getElementById("sticker3").value);
+    let stickers1 = parseInt(document.getElementById("sticker1").value);
+    let stickers2 = parseInt(document.getElementById("sticker2").value);
+    let stickers3 = parseInt(document.getElementById("sticker3").value);
 
     let total = stickers1 + stickers2 + stickers3;
     if(total === 0){
