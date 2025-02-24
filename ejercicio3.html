@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
+    <title>Ejercicio 3</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,39 +18,101 @@
 
 <body>
     
-    <div class="main main-2">
+    <div class="main main-3">
         
 
-    <div class="container container-2">
+    <div class="container container-3">
         <div class="goback"><a href="/index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
-        <div class="instrucciones">Puedes llevar hasta <strong>10</strong> stickers en total</div>
+        <div class="instrucciones">Ingresa tu password</div>
 
         <form>
-         <div class="grid sticker-grid">
-    
-            <div class="sticker">
-                <img src="/assets/img/sticker3.png" alt="sticker 1">
-                <input type="number" id="sticker1" name="sticker1" pattern="[0-9]*" placeholder="0">
-            </div>
+         <div class="grid password-grid">
+            <select name="select" class="numselection" id="num1" placeholder="#">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
 
-            <div class="sticker">
-                <img src="/assets/img/sticker7.png" alt="sticker 2">
-                <input type="number" id="sticker2" name="sticker2" pattern="[0-9]*" placeholder="0">
-            </div>
+            <select name="select" class="numbselection" id="num2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
 
-            <div class="sticker">
-                <img src="/assets/img/sticker2.png" alt="sticker 3">
-                <input type="number" id="sticker3" name="sticker3" pattern="[0-9]*" placeholder="0">
-            </div>
-            </div>
+            <select name="select" class="numbselection" id="num3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+            </select>
+        </div>
+            <input type="button" class="btn btn-password" value="Ingresar" onclick="checkPassword()">
+            <div id="mensaje" class="mensaje"></div>
 
-            <input type="submit" class="btn btn-sticker">
         </form>
     </div>
     </div>
 
 
-<script src="assets/js/condiciones-2.js"></script>
+<script>
+    function checkPassword(){
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let num3 = Number(document.getElementById("num3").value);
+
+        let password = num1 + num2 + num3;
+
+        if (num1===9 && num2===1 && num3===1){
+            document.getElementById("mensaje").innerHTML= "¡Correcto!"
+        }
+
+        else if (num1===9 && num2===1){
+            document.getElementById("mensaje").innerHTML= "Passwords 1 y 2 correctos"
+        }
+
+        else if (num1===9 && num3===1){
+            document.getElementById("mensaje").innerHTML= "Passwords 1 y 3 correctos"
+        }
+        
+        else if (num2===1 && num3===1){
+            document.getElementById("mensaje").innerHTML= "Passwords 2 y 3 correctos"
+        }
+
+        else if ( num1 === 9 ){
+            document.getElementById("mensaje").innerHTML= "Password 1 correcto"
+        }
+
+        else if ( num2 === 1 ) {
+            document.getElementById("mensaje").innerHTML= "Password 2 correcto"
+        }
+
+        else if  (num3===1){
+            document.getElementById("mensaje").innerHTML= "Password 3 correcto"
+        }
+
+        else{
+            document.getElementById("mensaje").innerHTML= "Password incorrecto"
+        }
+
+    }
+</script>
 
 </body>
 </html>

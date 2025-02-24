@@ -14,8 +14,8 @@
     --color-accent2: #F8CA26;
     --color-accent3: #F4553B;
     --color-accent4: #0FB59C;
-    --color-accent4: #20BFE6;
     --color-accent5: #2461AD;
+    --color-accent6: #20BFE6;
     --color-accent-light: #ffffff;
     --color-accent-muted: #FEE8DF;
 
@@ -274,62 +274,76 @@
       color: #ffffff;
     }
 
-  /* CARDS */
-  .card-container{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+  
+  
+  /* EJERCICIO 3 ------------------------------------------------------------------------------------------------------------ */
+  
+  .main-3{
+    background-image: url(/assets/img/bg-4.png);
   }
 
+  .container-3{
+    background-color: var(--color-bg-main);
+    padding: 0px;
+    max-height: 75%;
+  }
 
+  .container-3 .goback{
+    color: var(--color-accent4);
+  }
 
-  .card{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 300px;
-      height: 450px;
-      overflow: hidden;
-      border-radius: 18px;
-      box-shadow: var(--card-shadow);
-      overflow: hidden;
-      transition: all 1s ease;
-      }
+  .password-grid{
+    grid-template-columns: auto auto auto;
+    column-gap: 25px;
+  }
 
+  .container-3 select{
+    font-family: var(--font-family);
+    font-size: 18px;
+    padding: 10px 15px 10px 20px;
+    color: #1B1B1B;
+    font-weight: 500;
+    border-radius: 5px;
+    border:none;
+  }
 
-    .img-container{
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
+  select::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    padding: 0;
+    
     }
-      .card-img-top{
-        position: relative;
-        top: 25px;
-        height: 300px;
-        transition: all 1s ease;
-      }
-  
 
- 
+  .container-3 option{
+    font-family: var(--font-family);
+    
+  }
+  .instrucciones{
+    font-size: 22px;
+  }
 
-    .card-body{
-          max-width: 80%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          color: var(--color-accent-dark);
-          font-size: 12px;
-          padding-bottom:20px;
-          margin-top: -10px;
-          height: fit-content;
-      }
-  
+  form input{
+    text-align: center;
+    align-items: center;
+    }
 
+  .btn-password{
+    font-family: var(--font-family);
+    padding: 5px 30px;
+    font-size: 18px;
+    background-color: var(--color-accent-dark);
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
 
+  .btn-password:hover, .btn-password:focus, .btn-password:active{
+    background-color: var(--color-accent4);
+    color: #ffffff;
+  }
 
-  
+  .container-3 .mensaje{
+    color: #0FB59C;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+  }
