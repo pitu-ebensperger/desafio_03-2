@@ -90,9 +90,7 @@
     border-radius: 10px;
   }
   
-  .instrucciones{
-    font-size: 18px;
-  }
+
 
   .grid{
     display: grid;
@@ -204,6 +202,20 @@
   .container-2 .goback{
     color: var(--color-accent1);
   }
+
+  .instrucciones{
+    font-size: 22px;
+  }
+
+
+  .mensaje{
+    font-size: 18px;
+    color: var(--color-accent1);
+  }
+
+  #totalstickers{
+    font-weight: 800;
+  }
   .sticker-grid{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -252,12 +264,13 @@
       font-family: var(--font-family);
       padding: 5px 30px;
       font-size: 18px;
-      background-color: var(--color-accent1);
+      background-color: var(--color-accent-dark);
       color: #ffffff;
+      margin-bottom: 20px;
     }
 
-    .btn-sticker:hover{
-      background-color: var(--color-accent-dark);
+    .btn-sticker:hover, .btn-sticker:focus, .btn-sticker:active{
+      background-color: var(--color-accent1);
       color: #ffffff;
     }
 

@@ -23,34 +23,73 @@
 
     <div class="container container-2">
         <div class="goback"><a href="/index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
-        <div class="instrucciones">Puedes llevar hasta <strong>10</strong> stickers en total</div>
+        <div class="instrucciones"> Puedes llevar hasta <strong> 10</strong> stickers en total</div>
+        
 
         <form>
          <div class="grid sticker-grid">
     
             <div class="sticker">
                 <img src="/assets/img/sticker3.png" alt="sticker 1">
-                <input type="number" id="sticker1" name="sticker1" pattern="[0-9]*" placeholder="0">
+                <input type="number" id="sticker1" name="sticker1" min="0"  placeholder="0" oninput="validity.valid||(value='');">
             </div>
 
             <div class="sticker">
                 <img src="/assets/img/sticker7.png" alt="sticker 2">
-                <input type="number" id="sticker2" name="sticker2" pattern="[0-9]*" placeholder="0">
+                <input type="number" id="sticker2" name="sticker2" min="0" placeholder="0" oninput="validity.valid||(value='');">
             </div>
 
             <div class="sticker">
                 <img src="/assets/img/sticker2.png" alt="sticker 3">
-                <input type="number" id="sticker3" name="sticker3" pattern="[0-9]*" placeholder="0">
+                <input type="number" id="sticker3" name="sticker3" min="0"  placeholder="0" oninput="validity.valid||(value='');">
             </div>
             </div>
 
-            <input type="submit" class="btn btn-sticker">
+            <input type="button" class="btn btn-sticker" value="Verificar" onclick="stickertotal()">
+            <div class="mensaje"><span id="mensaje1"> </span><span id="totalstickers"></span><span id="mensaje2"> </span></div>
+
         </form>
+
     </div>
     </div>
 
 
-<script src="assets/js/condiciones-2.js"></script>
+<script>
+
+    function stickertotal(){
+
+    let stickers1 = Number(document.getElementById("sticker1").value);
+    let stickers2 = Number(document.getElementById("sticker2").value);
+    let stickers3 = Number(document.getElementById("sticker3").value);
+
+    let total = stickers1 + stickers2 + stickers3;
+    if(total === 0){
+        document.getElementById("mensaje1").innerHTML = "No llevas ningún sticker";
+        document.getElementById("totalstickers").innerHTML = "";
+        document.getElementById("mensaje2").innerHTML = "";
+    }
+
+    else if (total <= 10) {
+        document.getElementById("mensaje1").innerHTML = "Llevas ";
+        document.getElementById("totalstickers").innerHTML = total;
+        document.getElementById("mensaje2").innerHTML = " stickers en total ";
+    }
+    else if (total > 10){
+        document.getElementById("mensaje1").innerHTML = "Llevas demasiados stickers";
+        document.getElementById("totalstickers").innerHTML = "";
+        document.getElementById("mensaje2").innerHTML = "";
+    }
+
+    else{
+        document.getElementById("mensaje1").innerHTML = "";
+        document.getElementById("totalstickers").innerHTML = "";
+        document.getElementById("mensaje2").innerHTML = "";
+    }
+    
+
+}
+
+</script>
 
 </body>
 </html>
