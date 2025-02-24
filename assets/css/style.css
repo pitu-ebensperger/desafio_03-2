@@ -1,9 +1,6 @@
 :root {
     --font-family: 'Roboto Mono', Helvetica, sans-serif;
-    --font-accent: 'Rubik', Helvetica, sans-serif;
 
-
-    --color-bg-header: #1B1B1B;
     --color-bg-main: #FEE8DF;
 
     --color-text-dark: #1B1B1B;
@@ -19,6 +16,8 @@
     --color-accent-light: #ffffff;
     --color-accent-muted: #FEE8DF;
 
+    --color-red: #F4553B;
+    --color-transparent: transparent;
 
     --bg-btn-primary:#2461AD ;
     --bg-btn-primary-hover:#ffffff;
@@ -126,7 +125,7 @@
     row-gap: 50px;
   }
   .btn-primary{
-    font-family: var(--font-accent);
+    font-family: var(--font-family);
     background: var(--bg-btn-primary);
     border-radius: 50px;
     border:none;
@@ -164,8 +163,7 @@
   background-color: var(--color-bg-main);
   padding: 0px;
   max-height: 75%;
-  padding-bottom: 70px;
-
+  padding-bottom: 50px;
 }
 
 .container-1 img {
@@ -178,15 +176,34 @@
 
 
 .btn-select{
-  margin: 50px;
   background-color: transparent;
   border: 2px solid transparent;
 }
-.img-select{
-  border: 2px solid red;
+
+.img-select {
+  -webkit-filter: drop-shadow(2px 2px 0 var(--color-transparent))
+  drop-shadow(-2px 2px 0 var(--color-transparent))
+  drop-shadow(2px -2px 0 var(--color-transparent))
+  drop-shadow(-2px -2px 0 var(--color-transparent));
+
+filter: drop-shadow(2px 2px 0 var(--color-transparent))
+drop-shadow(-2px 2px 0 var(--color-transparent))
+drop-shadow(2px -2px 0 var(--color-transparent))
+drop-shadow(-2px -2px 0 var(--color-transparent));
 }
 
 
+.outlined {
+  -webkit-filter: drop-shadow(3px 3px 0 var(--color-red))
+                  drop-shadow(-3px 3px 0 var(--color-red))
+                  drop-shadow(3px -3px 0 var(--color-red))
+                  drop-shadow(-3px -3px 0 var(--color-red));
+
+  filter: drop-shadow(3px 3px 0 var(--color-red))
+          drop-shadow(-3px 3px 0 var(--color-red))
+          drop-shadow(3px -3px 0 var(--color-red))
+          drop-shadow(-3px -3px 0 var(--color-red));
+}
   /* EJERCICIO 2 ------------------------------------------------------------------------------------------------------------ */
   
   .main-2{

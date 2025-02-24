@@ -26,19 +26,18 @@
         <div class="instrucciones">Selecciona la imagen</div>
 
     
-            <button  type="button" onclick="selectBorder()"  id="btn-select" class="btn-select">
-                <img src="/assets/img/sticker8.png" alt="image selection">
+            <button  type="button"  id="btn-select" class="btn-select" onclick="selectBorder()" >
+                <img src="/assets/img/sticker8.png" alt="image selection" class="img-select" id="img-select" >
             </button>
     </div>
     </div>
 
 
-    <script>    
-    const redBorder = document.getElementById('btn-select');        
-    redBorder.addEventListener('click', function() {                
-        redBorder.classList.toggle('img-select');       
-    });
-
+    <script>  
+    function selectBorder() {
+    const redBorder = document.getElementById("img-select");        
+    redBorder.classList.toggle("outlined");    
+    }
     </script>
 </body>
 </html>
