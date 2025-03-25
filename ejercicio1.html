@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stickers</title>
+    <title>Ejercicio 1</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,31 +11,34 @@
    
     <script src="https://kit.fontawesome.com/662a1bdfcd.js" crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <div class="main main-indice">
-    <div class="container container-indice">
-            
-             <div class="grid grid-indice">
-                <btn class="btn btn-primary" type="button"><a href="./ejercicio1.html">Ejercicio 1 </a></btn>
-                <btn class="btn btn-primary" type="button"><a href="./ejercicio2.html">Ejercicio 2 </a></btn>
-                <btn class="btn btn-primary" type="button"><a href="./ejercicio3.html">Ejercicio 3 </a></btn>
-             </div>
+    
+    <div class="main main-1">
+        
 
+    <div class="container container-1">
+        <div class="goback"><a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
+        <div class="instrucciones">Selecciona la imagen</div>
 
+    
+            <button  type="button"  id="btn-select" class="btn-select" onclick="selectBorder()" >
+                <img src="./assets/img/sticker8.png" alt="image selection" class="img-select" id="img-select" >
+            </button>
     </div>
     </div>
 
 
-
-
-
-
-<script src="./assets/js/condiciones.js"></script>
-
+    <script>  
+    function selectBorder() {
+    const redBorder = document.getElementById("img-select");        
+    redBorder.classList.toggle("outlined");    
+    }
+    </script>
 </body>
 </html>
